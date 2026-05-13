@@ -104,8 +104,7 @@ public class Msf {
     }
 
     static RisultatoKruskal kruskal(List<int[]> archi, int numNodi) {
-        archi.sort((a, b) -> a[2] - b[2]);
-
+        archi.sort((a, b) -> Integer.compare(a[2], b[2]));
         int[] parent = new int[numNodi];
         int[] rank = new int[numNodi];
         for (int i = 0; i < numNodi; i++) {
