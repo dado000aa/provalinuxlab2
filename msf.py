@@ -41,6 +41,9 @@ def operazioni(vicini, nodi, nome_file):
 
                 if u < 0 or u >= nodi or v < 0 or v >= nodi:
                     continue
+
+                if u > v:
+                    u, v = v, u
                 
                 presente = 0
                 for vic in vicini[u]:
@@ -63,6 +66,9 @@ def operazioni(vicini, nodi, nome_file):
 
                 if u<0 or u>= nodi or v<0 or v>=nodi:
                     continue
+
+                if u > v:
+                    u, v = v, u
 
                 trovato = False
                 elemento_daRimuovere = None
