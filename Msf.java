@@ -35,7 +35,7 @@ public class Msf {
         int numNodi = 0;
 
         while ((linea = br.readLine()) != null) {
-            String[] parti = linea.split(" ");
+            String[] parti = linea.split("\\s+");
             if (parti[0].equals("c")) {
                 continue;
             } else if (parti[0].equals("p")) {
@@ -58,7 +58,7 @@ public class Msf {
         String linea;
 
         while ((linea = br.readLine()) != null) {
-            String[] parti = linea.split(" ");
+            String[] parti = linea.split("\\s+");
 
             if (parti[0].equals("+")) {
                 if (parti.length != 4) continue;
